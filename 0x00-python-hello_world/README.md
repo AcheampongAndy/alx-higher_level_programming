@@ -33,3 +33,12 @@
 	* You are not allowed to create new variables
 	* You are not allowed to use string literals
 9.  Write a Python script that prints “The Zen of Python”, by TimPeters, followed by a new line.
+10. Write a function in C that checks if a singly linked list has a cycle in it.
+	* Prototype: int check_cycle(listint_t *list);
+	* Return: 0 if there is no cycle, 1 if there is a cycle
+11. Write a Python script that prints exactly and that piece of art is useful - Dora Korpar, 2015-10-19, followed by a new line.
+	* Use the function write from the sys module
+	* You are not allowed to use print
+	* Your script should print to stderr
+	* Your script should exit with the status code 1
+12. 
