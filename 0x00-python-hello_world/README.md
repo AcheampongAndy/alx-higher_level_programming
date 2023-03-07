@@ -41,4 +41,4 @@
 	* You are not allowed to use print
 	* Your script should print to stderr
 	* Your script should exit with the status code 1
-12. 
+12. Write the Python function def magic_calculation(a, b): that does exactly the same as the following Python bytecode 
