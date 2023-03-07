@@ -11,4 +11,10 @@
 	* The output of the program should be:
 		* Float:, followed by the float with only 2 digits
 		* followed by a new line
-5. 
+5. Complete this source code in order to print 3 times a string stored in the variable str, followed by its first 9 characters.
+	* The output of the program should be:
+		* 3 times the value of str
+		* followed by a new line
+		* followed by the 9 first characters of str
+		* followed by a new line
+6.  
