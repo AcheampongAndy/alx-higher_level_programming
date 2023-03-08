@@ -8,5 +8,6 @@ def get_hex(number):
     else:
         return hexstr[ones]
 
+
 for number in range(99):
     print('{:d} = 0x{}'.format(number, get_hex(number)))
