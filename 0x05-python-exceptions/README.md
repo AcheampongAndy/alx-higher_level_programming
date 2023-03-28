@@ -20,3 +20,4 @@
 	* You have to use "{:d}".format() to print as integer
 	* You are not allowed to import any module
 	* You are not allowed to use type()
+2. 
