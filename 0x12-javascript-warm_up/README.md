@@ -6,3 +6,4 @@
 5. Write a script that prints My number: <first argument converted in integer> if the first argument can be converted to an integer:
 6. Write a script that prints 3 lines: (like 1-multi_languages.js) but by using an array of string and a loop
 7. Write a script that prints x times “C is fun”
+8. Write a script that prints a square
