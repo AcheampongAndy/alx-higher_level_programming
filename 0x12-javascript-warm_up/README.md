@@ -9,3 +9,4 @@
 8. Write a script that prints a square
 9. Write a script that prints the addition of 2 integers
 10. Write a script that computes and prints a factorial
+11. Write a script that searches the second biggest integer in the list of arguments.
