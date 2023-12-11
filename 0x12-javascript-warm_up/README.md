@@ -12,3 +12,4 @@
 11. Write a script that searches the second biggest integer in the list of arguments.
 12. Update this script to replace the value 12 with 89:
 13. Write a function that returns the addition of 2 integers.
+14. Write a file that modifies the value of myVar to 333
