@@ -5,14 +5,14 @@
 // If no argument passed, print 0
 // If the number of arguments is 1, print 0
 
-function sortNumber(array){
-	const integers = array.map(Number);
-	const sortedArray = [... new Set(integers)].sort((a, b) => b -a);
-	return sortedArray;
+function sortNumber (array) {
+  const integers = array.map(Number);
+  const sortedArray = [...new Set(integers)].sort((a, b) => b - a);
+  return sortedArray;
 }
-if (argv[2] === undefined || argv.length === 3){
-	console.log(0);
-} else{
-	const args = process.argv.slice(2);
-	console.log(sortNumber(args));
+if (process.argv[2] === undefined || process.argv.length === 3) {
+  console.log(0);
+} else {
+  const args = process.argv.slice(2);
+  console.log(sortNumber(args)[1]);
 }
