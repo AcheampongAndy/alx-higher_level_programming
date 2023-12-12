@@ -12,9 +12,9 @@ module.exports = class Square extends require('./5-square.js') {
     if (c === undefined) {
       this.print();
     } else {
-      for (let i = 0; i < this.size; i++) {
+      for (let i = 0; i < this.height; i++) {
         let row = '';
-        for (let j = 0; j < this.size; j++) {
+        for (let j = 0; j < this.width; j++) {
           row = row + c;
         }
         console.log(row);
