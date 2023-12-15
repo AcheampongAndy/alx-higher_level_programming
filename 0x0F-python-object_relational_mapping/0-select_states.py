@@ -13,10 +13,12 @@ running on localhost at port 3306
 import MySQLdb
 from sys import argv
 
-if __name__ = '__main__':
+if __name__ == '__main__':
     ''' Establish a connection'''
-    connection = MySQLdb.connect(host='localhost', user=argv[1],
-                                 passwd=argv[2], db=argv[3], port=3306)
+    connection = MySQLdb.connect(
+            host='localhost', port=3306,
+            user=argv[1], passwd=argv[2], db=argv[3]
+            )
 
     ''' Create a cursor object to execute SQL queries'''
     cursor = connection.cursor()
