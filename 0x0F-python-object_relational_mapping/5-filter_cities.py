@@ -25,7 +25,7 @@ if __name__ == '__main__':
             )
     cursor = connection.cursor()
     query = '''SELECT cities.id, cities.name, states.name FROM cities
-    INNER JOIN states ON cities.state_id = states.id 
+    INNER JOIN states ON cities.state_id = states.id
     WHERE states.name LIKE %s ORDER BY cities.id ASC'''
     cursor.execute(query, (state_name,))
     results = cursor.fetchall()
