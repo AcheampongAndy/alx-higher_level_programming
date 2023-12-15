@@ -26,8 +26,8 @@ if __name__ == '__main__':
             )
     cursor = connection.cursor()
 
-    query = 'SLECT * FROM states WHERE name LIKE %s ORDER BY states.id ASC'
-    cursor.execute(query, (state_name + %,))
+    query = 'SELECT * FROM states WHERE name LIKE %s ORDER BY states.id ASC'
+    cursor.execute(query, (state_name,))
     results = cursor.fetchall()
 
     for row in results:
