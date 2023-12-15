@@ -15,17 +15,18 @@ server running on localhost at port 3306
 import MySQLdb
 from sys import argv
 
-connection = MySQLdb.connect(
-        host='localhost', port=3306, user=argv[1],
-        passwd=argv[2], db=argv[3]
-        )
+if __name__ == '__main__':
+    connection = MySQLdb.connect(
+            host='localhost', port=3306, user=argv[1],
+            passwd=argv[2], db=argv[3]
+            )
 
-cursor = connection.cursor()
-cursor.execute('SELECT * FROM states ORDER BY states.id ASC')
-results = cursor.fetchall()
-for row in results:
-    if row[1].startswith("N"):
-        print(row)
+    cursor = connection.cursor()
+    cursor.execute('SELECT * FROM states ORDER BY states.id ASC')
+    results = cursor.fetchall()
+    for row in results:
+        if row[1].startswith("N"):
+            print(row)
 
-cursor.close()
-connection.close()
+    cursor.close()
+    connection.close()
