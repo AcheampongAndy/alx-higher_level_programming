@@ -20,7 +20,7 @@ from sqlalchemy.orm import Session
 if __name__ == '__main__':
     username, password, database = argv[1:4]
     engine = create_engine('msql+msqldb://{}:{}@localhost/{}'.format(
-        username, password, database), pool_pre_ping = True)
+        username, password, database), pool_pre_ping=True)
     Base.metadata.create_all(engine)
 
     session = Session(bind=engine)
