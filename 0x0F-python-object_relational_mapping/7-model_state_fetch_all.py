@@ -15,7 +15,7 @@
 from model_state import State, Base
 from sys import argv
 from sqlalchemy import (create_engine)
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import sessionmaker
 
 if __name__ == '__main__':
     username, password, database = argv[1:4]
@@ -23,6 +23,8 @@ if __name__ == '__main__':
         username, password, database), pool_pre_ping=True)
     Base.metadata.create_all(engine)
 
-    session = Session(bind=engine)
+    Session = sessionmaker(bind=engine)
+    session = Session()
+
     for state in session.query(State).order_by(states.id):
         print('{}: {}'.format(state.id, state.name))
