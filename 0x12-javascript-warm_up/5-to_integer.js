@@ -1,4 +1,11 @@
 #!/usr/bin/node
 
-const number = Math.floor(Number(process.argv[2]));
-console.log(isNaN(number) ? "Not a number": `My number: ${number}`);
+// Write a script that prints My number: <first argument converted in integer>
+// if the first argument can be converted to an integer:
+
+const myVar = process.argv;
+console.log(
+  myVar[2] === undefined || isNaN(parseInt(myVar[2]))
+    ? 'Not a number'
+    : 'My number: ' + parseInt(myVar[2])
+);

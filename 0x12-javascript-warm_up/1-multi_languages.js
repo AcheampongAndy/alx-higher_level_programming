@@ -1,7 +1,6 @@
 #!/usr/bin/node
 
-// script that prints 3 lines
+// A script that prints 3 lines
 
-const myVar1 = "C is fun\nPython is cool\nJavaScript is amazing";
-
-console.log(myVar1);
+const myLines = 'C is fun\nPython is cool\nJavaScript is amazing';
+console.log(myLines);

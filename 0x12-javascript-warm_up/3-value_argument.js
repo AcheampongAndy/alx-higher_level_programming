@@ -1,4 +1,10 @@
 #!/usr/bin/node
 
-const count = process.argv.length;
-console.log(count === 2 ? "No Argument": `${process.argv[2:]}`);
+// Write a script that prints the first argument passed to it:
+
+const myVar = process.argv;
+console.log(
+  myVar[2] === undefined
+    ? 'No argument'
+    : myVar[2]
+);
