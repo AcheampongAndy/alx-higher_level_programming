@@ -23,7 +23,7 @@ from sqlalchemy.orm import sessionmaker
 
 if __name__ == '__main__':
     username, password, database = argv[1:4]
-    engine = create_engine('mysql+mysqlconnector://{}:{}@localhost/{}'.format(
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
         username, password, database), pool_pre_ping=True)
     Base.metadata.create_all(engine)
 
