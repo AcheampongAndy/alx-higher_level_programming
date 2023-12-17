@@ -17,12 +17,14 @@
     * Your code should not be executed when imported
 '''
 from sys import argv
-import MySQLdb
 from model_state import Base, State
 from sqlalchemy import sessionmaker
 from sqlachemy import (create_engine)
 
 if __name__ == '__main__':
+    '''
+    Access to the database and get a state
+    '''
     username, password, database = argv[1:4]
     engine = create_engine('mysql+mysqlconnector://{}:{}@localhost/{}'.
                            format(username, password, database))
