@@ -23,18 +23,14 @@ from sqlalchemy import sessionmaker
 from sqlachemy import (create_engine)
 
 if __name__ == '__main__':
-    try:
-        username, password, database = argv[1:4]
-        engine = create_engine('mysql+mysqlconnector://{}:{}@localhost/{}'.
-                               format(username, password, database))
-        Session = sessionmaker(bind=engine)
-        session = Session()
+    username, password, database = argv[1:4]
+    engine = create_engine('mysql+mysqlconnector://{}:{}@localhost/{}'.
+                           format(username, password, database))
+    Session = sessionmaker(bind=engine)
+    session = Session()
 
-        first_state = session.query(State).order_by(State.id).first()
-        if first_state:
-            print('{}: {}'.format(first_state.id, first_state.name))
-        else:
-            print('Nothing')
-
-    except Exeception as e:
-        print(e)
+    first_state = session.query(State).order_by(State.id).first()
+    if first_state:
+        print('{}: {}'.format(first_state.id, first_state.name))
+    else:
+        print('Nothing')
