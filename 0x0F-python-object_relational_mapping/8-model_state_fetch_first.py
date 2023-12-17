@@ -16,25 +16,23 @@
     * If the table states is empty, print Nothing followed by a new line
     * Your code should not be executed when imported
 '''
-from sys import argv
 from model_state import Base, State
-from sqlalchemy import sessionmaker
-from sqlachemy import (create_engine)
+from sys import argv
+from sqlalchemy import (create_engine)
+from sqlalchemy.orm import sessionmaker
 
 if __name__ == '__main__':
-    '''
-    Access to the database and get a state
-    '''
     username, password, database = argv[1:4]
     engine = create_engine('mysql+mysqlconnector://{}:{}@localhost/{}'.format(
-                           username, password, database), pool_pre_ping=True)
+        username, password, database), pool_pre_ping=True)
     Base.metadata.create_all(engine)
 
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    first_state = session.query(State).order_by(State.id).first()
-    if first_state:
-        print('{}: {}'.format(first_state.id, first_state.name))
+    first_instance = session.query(State).order_by(State.id).first()
+
+    if first_instance:
+        print('{}: {}'.format(first_instance.id, first_instance.name))
     else:
         print('Nothing')
