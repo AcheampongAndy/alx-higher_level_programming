@@ -12,19 +12,19 @@
     * The results must be displayed as they are in the example below
     * Your code should not be executed when imported
 '''
-from model_state import State, Base
+from model_state import Base, State
 from sys import argv
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
 
 if __name__ == '__main__':
     username, password, database = argv[1:4]
-    engine = create_engine('msql+msqldb://{}:{}@localhost/{}'.format(
+    engine = create_engine('mysql+mysqlconnector://{}:{}@localhost/{}'.format(
         username, password, database), pool_pre_ping=True)
     Base.metadata.create_all(engine)
 
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for state in session.query(State).order_by(states.id):
+    for state in session.query(State).order_by(State.id):
         print('{0}: {1}'.format(state.id, state.name))
