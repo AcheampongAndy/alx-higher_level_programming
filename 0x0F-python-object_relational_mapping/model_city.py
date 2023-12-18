@@ -20,6 +20,9 @@ from model_state import Base, State
 
 
 class City(Base):
+    ''''
+    Class city
+    '''
     __tablename__ = 'cities'
 
     id = Column(Integer, primary_key=True)
