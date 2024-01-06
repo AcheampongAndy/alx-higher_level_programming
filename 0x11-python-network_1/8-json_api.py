@@ -10,10 +10,10 @@ if __name__ == "__main__":
     r = requests.post(url, data = data)
 
     try:
-        file_json = r.json()
-        if file_json == {}:
+        json_data = r.json()
+        if json_data == {}:
             print('No result')
         else:
-            print('[{}] {}'.format(file_json.get('id'), fiel_json('name')))
+            print('[{}] {}'.format(json_data.get('id'), json_data('name')))
     except ValueError:
         print('Not a valid JSON')
