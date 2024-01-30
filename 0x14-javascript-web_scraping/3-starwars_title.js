@@ -6,11 +6,10 @@ const episode = process.argv[2];
 request(url + episode, function(erorr, response, body) {
 	if (error) {
 		console.log(error);
+	} else if (response.statusCode === 200){
+		const jsonResponse = JSON.parse(body);
+		console.log(jsonResponse.title);
 	} else {
-		if (response.statusCode === 2000){
-			const jsonResponse = JSON.parse(body);
-			console.log(jsonResponse.title);
-		}
+		console.log('Error code: ' + response.statusCode);
 	}
 });
-
